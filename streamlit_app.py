@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # Load data (use cached version in real app)
-df = pd.read_excel("Uploaded opportunities .xlsx", sheet_name=" Opportunities for ballers main")
+df = pd.read_excel("opportunities.xlsx", sheet_name=" Opportunities for ballers main")
 df.columns = [col.strip() for col in df.columns]
 df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
 
